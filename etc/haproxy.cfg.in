@@ -29,7 +29,17 @@ defaults
 frontend cloudapi
         bind *:8443 accept-proxy
         default_backend servers
+        acl is_websocket path_end /changefeed
+        acl is_websocket hdr(Upgrade) -i WebSocket
+        acl is_websocket hdr_beg(Host) -i ws
+        use_backend websockets if is_websocket
 
 backend servers
         option httpchk GET /--ping
+@@CLOUDAPI_INSTANCES@@
+
+backend websockets
+        balance source
+        option http-server-close
+        option forceclose
 @@CLOUDAPI_INSTANCES@@
