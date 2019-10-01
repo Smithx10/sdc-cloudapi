@@ -32,6 +32,8 @@
         "libuuid": "0.2.1",
         "mahi": "2.3.0",
         "mime": "1.2.7",
+        "changefeed": "1.5.0",
+        "watershed":  "0.4.0",
         "nodemailer": "0.7.1",
         "nopt": "2.0.0",
         "restify": "4.3.3",
