@@ -45,7 +45,7 @@ JSL_FILES_NODE   = $(JS_FILES)
 JSSTYLE_FILES	 = $(JS_FILES)
 JSSTYLE_FLAGS    = -f tools/jsstyle.conf
 SMF_MANIFESTS_IN    = smf/manifests/cloudapi.xml.in smf/manifests/haproxy.xml.in smf/manifests/stud.xml.in
-ESLINT_FILES	= $(JS_FILES)
+#ESLINT_FILES	= $(JS_FILES)
 
 CLEAN_FILES	+= node_modules cscope.files
 
