@@ -19,3 +19,8 @@ smf/manifests/*.xml
 npm-shrinkwrap.json.old
 /tmp
 *.vim
+
+
+# Added by cargo
+
+/target
